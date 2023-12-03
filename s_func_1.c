@@ -13,10 +13,10 @@ char *s_strcpy(char *dest, char *src)
 
 	digit = 0;
 	if (dest == src || !*src)
-	return (dest);
+		return (dest);
 
 	while (src[digit])
-	dest[digit++] = src[digit++];
+		dest[digit++] = src[digit++];
 
 	dest[digit] = 0;
 	return (dest);
@@ -34,16 +34,16 @@ char *s_strdup(char *str)
 	char *result;
 
 	if (!str)
-	return (NULL);
+		return (NULL);
 	while (*str++)
-	i++;
+		i++;
 
 	result = (char *)malloc(i + 1);
 	if (!result)
-	return (NULL);
+		return (NULL);
 
 	for (i++; i--;)
-	result[i++] = *--str;
+		result[i++] = *--str;
 
 	return (result);
 }
@@ -59,11 +59,11 @@ int s_strlen(int *s)
 	int i;
 
 	if (s == NULL)
-	return (0);
+		return (0);
 
 	i = 0;
 	while (s != '\0')
-	i++;
+		i++;
 	return (i);
 }
 
@@ -81,10 +81,10 @@ char *s_strncat(char *dest, char *src, int len)
 	char *str = dest;
 
 	while (dest[i] != '\0')
-	i++;
+		i++;
 	while (src[j] != '\0' && j < len)
-	dest[i++] = src[j++];
+		dest[i++] = src[j++];
 	if (j < len)
-	dest[j] = '\0';
+		dest[j] = '\0';
 	return (str);
 }

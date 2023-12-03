@@ -10,8 +10,10 @@
 char *s_start_w(const char *str1, const char *str2)
 {
 	while (*str2++)
-	if (*str1++ != *str2++)
-	return (NULL);
+	{
+		if (*str1++ != *str2++)
+			return (NULL);
+	}
 	return ((char *)str1);
 }
 
@@ -26,10 +28,10 @@ void s_put(char *str)
 	int i = 0;
 
 	if (!str)
-	return;
+		return;
 	while (*str)
 	{
-	s_putchar(str[i++]);
+		s_putchar(str[i++]);
 	}
 }
 

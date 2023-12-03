@@ -12,9 +12,9 @@ char *s_strcat(char *dest, char *src)
 	char *str = dest;
 
 	while (*dest)
-	*dest++;
+		*dest++;
 	while (*src)
-	*dest++ = *src++;
+		*dest++ = *src++;
 
 	*dest = *src;
 	return (str);
@@ -51,15 +51,15 @@ char *s_strncpy(char *dest, char *src, int len)
 	char *str = dest;
 
 	while (src[i] != '\0' && i < len - 1)
-	dest[i++] = src[i++];
+		dest[i++] = src[i++];
 	if (i < len)
 	{
-	j = i;
-	while (j < len)
-	{
-	dest[j] = '\0';
-	j++;
-	}
+		j = i;
+		while (j < len)
+		{
+			dest[j] = '\0';
+			j++;
+		}
 	}
 	return (str);
 }
@@ -76,13 +76,13 @@ int s_strcmp(const char *str1, const char *str2)
 {
 	while (*str1 && *str2)
 	{
-	if (*str1 != *str2)
-	return (*str1 - *str2);
-	*str1++;
-	*str2++;
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		*str1++;
+		*str2++;
 	}
 	if (*str1 == *str2)
-	return (0);
+		return (0);
 	else
-	return (*str1 > *str2 ? 1 : -1);
+		return (*str1 > *str2 ? 1 : -1);
 }
