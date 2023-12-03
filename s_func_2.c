@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * *s_strcat - Entry point
