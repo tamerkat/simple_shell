@@ -8,7 +8,7 @@
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-// #include <sys/wait.h>
+#include <sys/wait.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <limits.h>
@@ -49,7 +49,7 @@ int s_putfd(char s, int file);
 int s_putsfd(char *s, int file);
 
 /*s_func_2*/
-char *s_strcat( char *dest,  char *src);
+char *s_strcat(char *dest,	char *src);
 char *s_strchr(char *dest, char src);
 char *s_strncpy(char *dest, char *src, int len);
 int s_strcmp(const char *str1, const char *str2);
@@ -105,8 +105,8 @@ node_t *node_start_w(node_t *node, char *pro, char s);
 /* data struct */
 
 /**
- * struct data - Entry point 
- * @arg: pointer 
+ * struct data - Entry point
+ * @arg: pointer
  * @argv: pointer
  * @path: pointer
  * @argc: Number
@@ -115,7 +115,7 @@ node_t *node_start_w(node_t *node, char *pro, char s);
  * @line_count_flag: Number
  * @fname: pointer
  * @env: pointer
- * @environ: pointer
+ * @environs: pointer
  * @history: node
  * @alias: node
  * @env_changed: pointer
